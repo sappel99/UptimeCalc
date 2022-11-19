@@ -19,4 +19,10 @@ public class UptimeController {
 
         return String.format("%.2f", uptimeinMinutes);
     }
+
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public String calculateUptime(){
+        return this.calculateUptime(99.95);
+    }
 }
