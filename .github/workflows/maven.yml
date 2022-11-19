@@ -34,7 +34,7 @@ jobs:
           java -jar target/*.jar &
           sleep 5
           mvn -B verify --file pom.xml
-          kill -9 `lsof -i:8080 -t`
+      # kill -9 `lsof -i:8080 -t`
     - name: Maven install
       run: mvn -B install --file pom.xml -DskipTests=true
     - name: Upload a Build Artifact
